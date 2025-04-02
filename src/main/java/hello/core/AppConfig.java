@@ -8,11 +8,8 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-// 기존 AppConfig
 @Configuration
 public class AppConfig {
-    // 어디선가 AppConfig를 통해 MemberService를 불러다 사용할 것
-
     @Bean
     public MemberService memberService(){
         return new MemberServiceImpl(memberRepository());
