@@ -5,7 +5,7 @@ import hello.core.member.Member;
 import org.springframework.stereotype.Component;
 
 // 정률할인제
-@Component
+//@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountRate = 10;
