@@ -10,8 +10,10 @@ public class StatefulServiceTest {
 
     @Test
     void statefulServiceSingleton() {
+        // 스프링 컨테이너 생성 (내부적으로 싱글톤 컨테이너 역할 수행)
         ApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
 
+        // 스프링 컨테이너에서 같은 인스턴스(=싱글톤 빈)를 조회
         StatefulService statefulService1 = ac.getBean("statefulService", StatefulService.class);
         StatefulService statefulService2 = ac.getBean("statefulService", StatefulService.class);
 
